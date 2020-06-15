@@ -6,7 +6,7 @@ export const CartItem = ({ product }) => {
       <div>
         {product.title}
         x{product.quantity}
-        {product.price * product.quantity}:-
+        {/*{product.price * product.quantity}:-*/}
       </div>
       <div>
         <button type='button' onclick={() => { }}>-</button>
