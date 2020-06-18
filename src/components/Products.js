@@ -8,7 +8,7 @@ import { fetchProducts } from 'reducers/products'
 
 export const Products = () => {
   const dispatch = useDispatch()
-  const fetchAll = dispatch(fetchProducts())
+  //const fetchAll = dispatch(fetchProducts())
   const allProducts = useSelector((state) => state.products.all)
 
   // TODO - fetch all products from the store
