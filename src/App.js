@@ -11,6 +11,7 @@ import { Login } from 'pages/Login'
 import { CartPage } from 'pages/CartPage'
 import { CustomerInfo } from 'pages/CustomerInfo'
 import { Books } from 'pages/Books'
+import { Contact } from 'pages/Contact'
 
 
 
@@ -26,14 +27,17 @@ const store = configureStore({ reducer })
 export const App = () => {
   return (
     <BrowserRouter>
-
       <Provider store={store}>
+
         <Switch>
           <Route path='/' exact>
             <Home />
           </Route>
           <Route path='/about' exact>
             <About />
+          </Route>
+          <Route path='/contact' exact>
+            <Contact />
           </Route>
           <Route path='/books' exact>
             <Books />
@@ -44,7 +48,7 @@ export const App = () => {
           <Route path='/shoppingcart' exact>
             <CartPage />
           </Route>
-          <Route path='/`${name}`/page' exact>
+          <Route path='/page/:customer' exact>
             <CustomerInfo />
           </Route>
         </Switch>

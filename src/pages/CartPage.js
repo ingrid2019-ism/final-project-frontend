@@ -1,10 +1,13 @@
 import React from 'react'
+import { Cart } from 'components/Cart'
+import { Navbar } from 'components/Navbar'
 
 
 export const CartPage = () => {
   return (
     <div>
-      <h3>This is your shoppingcart</h3>
+      <Navbar />
+      <Cart />
     </div>
   )
 }

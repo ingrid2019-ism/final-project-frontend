@@ -1,11 +1,19 @@
 import React from 'react'
+import { Products } from 'components/Products'
+import { Navbar } from 'components/Navbar'
+
+import { FetchProductButton } from 'components/FetchProductsButton'
+
 
 
 export const Books = () => {
 
   return (
     <div>
-      <h3>Here you will se all the books</h3>
+      <Navbar />
+      <FetchProductButton />
+      <Products />
     </div>
   )
 }
+
