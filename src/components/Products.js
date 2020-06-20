@@ -10,6 +10,7 @@ export const Products = () => {
   const dispatch = useDispatch()
   //const fetchAll = dispatch(fetchProducts())
   const allProducts = useSelector((state) => state.products.all)
+  console.log(allProducts)
 
   // TODO - fetch all products from the store
   //const allProducts = []

@@ -6,6 +6,7 @@ import { FetchProductButton } from 'components/FetchProductsButton'
 
 
 
+
 export const Books = () => {
 
   return (
@@ -13,6 +14,7 @@ export const Books = () => {
       <Navbar />
       <FetchProductButton />
       <Products />
+
     </div>
   )
 }
