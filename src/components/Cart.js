@@ -20,7 +20,7 @@ export const Cart = () => {
   return (
 
     < div >
-      <span role='img' aria-label='cart'>🛒</span>
+
       <ul>
         {products.map((product) => (
           <CartItem key={product._id} product={product} />
