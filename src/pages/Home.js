@@ -15,8 +15,8 @@ export const Home = () => {
       <Navbar />
       <LoadingIndicator />
       <FetchProductButton />
-      <Cart />
-      <Products />
+
+
     </div>
 
   )

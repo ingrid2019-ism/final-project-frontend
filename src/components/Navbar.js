@@ -1,8 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
-import { FetchProductsButton } from 'components/FetchProductsButton'
+import { CartItem } from 'components/CartItem'
+
 
 export const Navbar = () => {
+  const numProducts = useSelector((store) => store.cart.items).length
+
+  console.log(numProducts)
 
   return (
     <nav>
@@ -17,7 +22,7 @@ export const Navbar = () => {
           <NavLink to='/login'>Log in/Returning customer</NavLink>
         </li>
         <li>
-          <NavLink to='/shoppingcart'><span role='img' aria-label='cart'>🛒</span></NavLink>
+          <NavLink to='/shoppingcart'><span role='img' aria-label='cart'>🛒{numProducts}</span></NavLink>
         </li>
         <li>
           <NavLink to='/books'>Books</NavLink>

@@ -7,9 +7,9 @@ export const CartItem = ({ product }) => {
   return (
     <li>
       <div>
-        {product.title}
-        x{product.quantity}
-        {/*{product.price * product.quantity}:-*/}
+        <h3>{product.title}</h3>
+        <h3> x{product.quantity}</h3>
+        <h3>{product.price * product.quantity}:-</h3>
       </div>
       <div>
         <button type='button' onClick={() => dispatch(cart.actions.removeItem(product))}>-</button>
