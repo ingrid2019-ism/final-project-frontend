@@ -5,8 +5,8 @@ export const LoadingIndicator = () => {
   const isLoading = useSelector((state) => state.ui.isLoading)
 
   return (
-    <>
-      {isLoading && <div>!! Loading !!</div>}
-    </>
+    <div className='styling-loader'>
+      {isLoading && <div className="loader"></div>}
+    </div>
   )
 }

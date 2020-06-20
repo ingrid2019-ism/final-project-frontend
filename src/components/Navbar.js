@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { FirstNavContainer, NavContent, NavStyleLink, StyledLink } from 'components/StyledComponents'
+
+import { FirstNavContainer, HeroImage, SecondaryNavContainer, NavContent, NameLogo, HomeLink, StyledLink } from 'components/StyledComponents'
 
 
 export const Navbar = () => {
@@ -13,28 +13,32 @@ export const Navbar = () => {
     <nav>
       <FirstNavContainer>
 
-        <h1>
-          <Link to='/'>Books 4 U</Link>
-        </h1>
+        <NameLogo>
+          <HomeLink to='/' color='#ffffff'>Books 4 U</HomeLink>
+        </NameLogo>
         {/*<ul>*/}
         <NavContent>
-          <NavStyleLink>
-            <StyledLink to='/contact'>Contact</StyledLink>
-          </NavStyleLink>
-          <NavStyleLink>
-            <StyledLink to='/login'>Log in/Returning customer</StyledLink>
-          </NavStyleLink>
-          <NavStyleLink>
-            <StyledLink to='/shoppingcart'><span role='img' aria-label='cart'>🛒{numProducts}</span></StyledLink>
-          </NavStyleLink>
+          <li>
+            <StyledLink to='/contact' color='#ffffff'>Contact</StyledLink>
+          </li>
+          <li>
+            <StyledLink to='/login' color='#ffffff'>Sign Up</StyledLink>
+          </li>
+          <li>
+            <StyledLink to='/shoppingcart' color='#ffffff'><span className='cart-icon' role='img' aria-label='cart'>🛒{numProducts}</span></StyledLink>
+          </li>
         </NavContent>
       </FirstNavContainer>
-      <li>
-        <StyledLink to='/books'>Books</StyledLink>
-      </li>
-      <li>
-        <StyledLink to='/about'>About</StyledLink>
-      </li>
+
+      <SecondaryNavContainer>
+        <li>
+          <StyledLink to='/books' color='black'>Books</StyledLink>
+        </li>
+        <li>
+          <StyledLink to='/about' color='black'>About</StyledLink>
+        </li>
+      </SecondaryNavContainer>
+
       {/*</ul>*/}
     </nav>
 

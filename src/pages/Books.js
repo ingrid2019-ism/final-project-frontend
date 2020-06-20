@@ -13,7 +13,7 @@ export const Books = () => {
     <div>
       <Navbar />
       <FetchProductButton />
-      <Products />
+
 
     </div>
   )

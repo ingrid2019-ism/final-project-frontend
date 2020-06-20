@@ -5,6 +5,7 @@ import { Products } from 'components/Products'
 import { Cart } from 'components/Cart'
 import { FetchProductButton } from 'components/FetchProductsButton'
 import { Navbar } from 'components/Navbar'
+import { HeroImage } from 'components/StyledComponents'
 
 
 export const Home = () => {
@@ -13,8 +14,11 @@ export const Home = () => {
 
     <div>
       <Navbar />
-      <LoadingIndicator />
-      <FetchProductButton />
+      <HeroImage>
+        <LoadingIndicator />
+        <FetchProductButton />
+        <Products />
+      </HeroImage>
 
 
     </div>
