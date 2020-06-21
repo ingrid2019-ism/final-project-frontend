@@ -8,7 +8,7 @@ font-family: 'MuseoModerno', cursive;*/
 export const HeroImage = styled.div`
  height: 700px;
  width: 100%;
- background-image: url(${img});
+ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${img});
  background-size: contain;
  background-repeat: no-repeat;
  /*background: cover;*/

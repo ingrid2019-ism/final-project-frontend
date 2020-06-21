@@ -75,6 +75,7 @@ const ProductCard = ({ title, secondaryText, thumbnailUrl, coverImage, className
 
 export const Product = ({ product }) => {
   const dispatch = useDispatch()
+
   return (
     <Display>
       <div className='margin'>

@@ -26,5 +26,6 @@ export const cart = createSlice({
     removeAll: (state, action) => {
       state.items = []
     },
+
   }
 })

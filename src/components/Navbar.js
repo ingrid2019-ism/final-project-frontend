@@ -22,7 +22,7 @@ export const Navbar = () => {
             <StyledLink to='/contact' color='#ffffff'>Contact</StyledLink>
           </li>
           <li>
-            <StyledLink to='/login' color='#ffffff'>Sign Up</StyledLink>
+            <StyledLink to='/signup' color='#ffffff'>Sign Up</StyledLink>
           </li>
           <li>
             <StyledLink to='/shoppingcart' color='#ffffff'><span className='cart-icon' role='img' aria-label='cart'>🛒{numProducts}</span></StyledLink>

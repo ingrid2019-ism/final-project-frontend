@@ -7,9 +7,9 @@ import { cart } from './reducers/cart'
 import { products } from './reducers/products'
 import { Home } from 'pages/Home'
 import { About } from 'pages/About'
-import { Login } from 'pages/Login'
+import { SignUp } from 'pages/SignUp'
 import { CartPage } from 'pages/CartPage'
-import { CustomerInfo } from 'pages/CustomerInfo'
+import { CheckedOut } from 'pages/CheckedOut'
 import { Books } from 'pages/Books'
 import { Contact } from 'pages/Contact'
 
@@ -42,15 +42,16 @@ export const App = () => {
           <Route path='/books' exact>
             <Books />
           </Route>
-          <Route path='/login' exact>
-            <Login />
+          <Route path='/signup' exact>
+            <SignUp />
           </Route>
           <Route path='/shoppingcart' exact>
             <CartPage />
           </Route>
-          <Route path='/page/:customer' exact>
-            <CustomerInfo />
+          <Route path='/checkout' exact>
+            <CheckedOut />
           </Route>
+
         </Switch>
 
       </Provider>

@@ -7,7 +7,8 @@ export const Contact = () => {
   return (
     <div>
       <Navbar />
-      <h3>This is the contact page</h3>
+      <h3>Welcome to reach out to us</h3>
+      <h3>books4u@info.com</h3>
     </div>
   )
 }

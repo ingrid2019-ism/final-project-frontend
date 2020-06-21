@@ -2,11 +2,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from './ui'
 
-// Here Damien has the product data
-
-
-
-
 
 export const products = createSlice({
   name: 'products',
