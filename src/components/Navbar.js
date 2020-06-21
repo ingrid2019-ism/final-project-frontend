@@ -1,13 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-
-import { FirstNavContainer, HeroImage, SecondaryNavContainer, NavContent, NameLogo, HomeLink, StyledLink } from 'components/StyledComponents'
-
+import { FirstNavContainer, SecondaryNavContainer, NavContent, NameLogo, HomeLink, StyledLink } from 'components/StyledComponents'
 
 export const Navbar = () => {
   const numProducts = useSelector((store) => store.cart.items).length
-
-  console.log(numProducts)
 
   return (
     <nav>

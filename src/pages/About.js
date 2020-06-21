@@ -1,13 +1,17 @@
 import React from 'react'
 import { Navbar } from 'components/Navbar'
+import {ProductCard} from 'components/StyledComponents'
 
 
 export const About = () => {
   return (
-    <div>
+    <main>
       <Navbar />
-      <h3>About us</h3>
-      <p>At vero eos et accusamus et iusto odio dignissimos
+      <div className='about'>
+      <ProductCard 
+      title= 'About Us'
+      secondaryText=
+      'At vero eos et accusamus et iusto odio dignissimos
       ducimus qui blanditiis praesentium voluptatum deleniti
       atque corrupti quos dolores et quas molestias excepturi
       sint occaecati cupiditate non provident, similique
@@ -17,8 +21,9 @@ export const About = () => {
       cum soluta nobis est eligendi optio cumque nihil
       impedit quo minus id quod maxime placeat facere possimus,
       omnis voluptas assumenda est, omnis dolor repellendus.
-      Temporibus autem quibusdam et aut officiis debitis aut rerum.
-         </p>
-    </div>
-  )
+      Temporibus autem quibusdam et aut officiis debitis aut rerum.'
+      />
+      </div>
+       </main>
+)
 }

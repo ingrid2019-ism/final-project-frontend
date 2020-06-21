@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Navbar } from 'components/Navbar'
 import styled from 'styled-components/macro'
+import { AddToCartButton, SecondaryText } from 'components/StyledComponents'
 
 
 export const MainContainer = styled.div`
@@ -11,10 +12,10 @@ flex-direction: column;
 }
 `
 export const Container = styled.div`
+background-color: white;
 box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
-border-radius: 3px;
+border-radius: 6px;
 width: 50%;
-background-image: linear-gradient(to right, #4ca3b0, #e1fafa);
 padding: 20px;
 margin: 20px;
 @media (min-width: 600px) {
@@ -22,15 +23,15 @@ margin: 20px;
 }
 `
 export const Title = styled.h1`
-/*font-family: 'Quicksand', sans-serif;*/
-color: white;
-margin-bottom: 50px;
+font-family: 'MuseoModerno';
+color: black;
+margin-bottom: 25px;
 font-size: 24px;
 `
 export const SmallTitle = styled.h3`
-/*font-family: 'Quicksand', sans-serif;*/
-color: #016952;
-margin-bottom: 50px;
+font-family: 'MuseoModerno';
+color: black;
+margin-bottom: 15px;
 font-size: 19px;
 `
 export const Content = styled.div`
@@ -38,7 +39,7 @@ display: flex;
 flex-direction: column;
 `
 export const InputField = styled.input`
-/*font-family: 'Quicksand', sans-serif;*/
+font-family: 'MuseoModerno';
 box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
 border-radius: 3px;
 border: none;
@@ -47,7 +48,7 @@ margin-bottom: 15px;
 padding: 5px;
 `
 export const Button = styled.button`
-/*font-family: 'Quicksand', sans-serif;*/
+font-family: 'MuseoModerno';
 background: #3a7f8a;
 color: white;
 box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
@@ -96,51 +97,48 @@ export const SignUp = () => {
       .catch(err => { console.error(err) })
   }
 
-  // if user is logged out, show login  
 
   return (
     <div>
       <Navbar />
-      <Container>
-        <form onSubmit={handleFormSubmit} >
-          <Title>Welcome</Title>
-          <Title>Sign Up</Title>
-          <Content>
-            <InputField
-              value={name}
-              placeholder='Enter Name'
-              type='text'
-              name='name'
-              onChange={event => setName(event.target.value)}
-              required
-            />
-
-            <InputField
-              value={email}
-              placeholder='Enter Email'
-              type='email'
-              name='email'
-              onChange={event => setEmail(event.target.value)}
-              required
-            />
-            <InputField
-              value={password}
-              placeholder='Enter Password'
-              type='password'
-              name='password'
-              onChange={event => setPassword(event.target.value)}
-              required
-            />
-            {errorMessage && <div>  <br />{errorMessage} </div>}
-            {successMessage && <div> <br />{successMessage} </div>}
-            <br />
-
-            <Button onClick={handleFormSubmit} type="submit" >Submit</Button>
-          </Content>
-
-
-        </form>
-      </Container >
+      <div className='about'>
+        <Container>
+          <form onSubmit={handleFormSubmit} >
+            <Title>Sign Up</Title>
+            <SmallTitle>To Get Our Newsletter</SmallTitle>
+            <Content>
+              <InputField
+                value={name}
+                placeholder='Enter Name'
+                type='text'
+                name='name'
+                onChange={event => setName(event.target.value)}
+                required
+              />
+              <InputField
+                value={email}
+                placeholder='Enter Email'
+                type='email'
+                name='email'
+                onChange={event => setEmail(event.target.value)}
+                required
+              />
+              <InputField
+                value={password}
+                placeholder='Enter Password'
+                type='password'
+                name='password'
+                onChange={event => setPassword(event.target.value)}
+                required
+              />
+              {errorMessage && <div>  <br />{errorMessage} </div>}
+              {successMessage && <div> <br />{successMessage} </div>}
+              <br />
+              <AddToCartButton onClick={handleFormSubmit} type="submit" >Submit</AddToCartButton>
+            </Content>
+          </form>
+        </Container >
+      </div>
     </div>
   )
 

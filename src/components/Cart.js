@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { CartItem } from './CartItem'
 import { RemoveButton } from 'components/RemoveAllButton'
-import { Link } from 'react-router-dom'
+import { Title, CheckoutLink, ProductCard } from 'components/StyledComponents'
 
 
 
@@ -18,18 +18,28 @@ export const Cart = () => {
 
     return (
       < div >
-        <RemoveButton />
+        <div className='margin'>
+          <RemoveButton />
+        </div>
         <ul>
           {products.map((product) => (
             <CartItem key={product._id} product={product} />
           ))}
         </ul>
-        <h3>Total:{totalPrice}:-</h3>
-        <Link to='/checkout' color='#ffffff'>Checkout<span role='img' aria-label='moneyemoji'>💸</span></Link>
+        <div className='margin'>
+          <Title> Total: {totalPrice} :-</Title>
+        </div>
+        <div className='checkout-link'>
+          <CheckoutLink to='/checkout' color='black'>Checkout<span role='img' aria-label='moneyemoji'>💸</span></CheckoutLink>
+        </div>
       </div >)
   } else {
     return (
-      <h3>Your cart is empty. Let´s start shopping!</h3>
+      <div className='about'>
+        <ProductCard
+          title='Your cart is empty. Let´s start shopping!'
+        />
+      </div>
     )
   }
 }

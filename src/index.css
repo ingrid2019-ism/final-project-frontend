@@ -6,9 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  background-color: rgb(221, 220, 220);
- 
-
-}
+ }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -20,7 +18,10 @@ code {
 }
 
 .styling-loader {
-  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 50px 50px 50px;
 }
 
 .loader {
@@ -42,4 +43,18 @@ code {
   margin-right: 0px;
   margin-bottom: 10px;
   margin-left: 5px;
+}
+
+.checkout-link {
+background-color: white;
+width: fit-content;
+padding: 10px;
+border-radius: 6px;
+margin-left: 15px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;;
 }

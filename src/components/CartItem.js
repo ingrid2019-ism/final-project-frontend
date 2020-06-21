@@ -1,21 +1,22 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { cart } from 'reducers/cart'
+import { ProductCard, SecondaryText, AddToCartButton } from 'components/StyledComponents'
 
 export const CartItem = ({ product }) => {
   const dispatch = useDispatch()
   return (
-    <li>
+    <main>
+      <SecondaryText>{product.quantity} X </SecondaryText>
+      <ProductCard
+        title={product.title}
+        secondaryText={product.price * product.quantity}
+      />
       <div>
-        <h3>{product.title}</h3>
-        <h3> x{product.quantity}</h3>
-        <h3>{product.price * product.quantity}:-</h3>
+        <AddToCartButton onClick={() => dispatch(cart.actions.removeItem(product))}>-</AddToCartButton>
+        <AddToCartButton onClick={() => dispatch(cart.actions.addItem(product))}>+</AddToCartButton>
       </div>
-      <div>
-        <button type='button' onClick={() => dispatch(cart.actions.removeItem(product))}>-</button>
-        <button type='button' onClick={() => dispatch(cart.actions.addItem(product))}>+</button>
-      </div>
-    </li >
+    </main>
   )
 
 }
