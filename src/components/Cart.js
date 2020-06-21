@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { CartItem } from './CartItem'
+import { RemoveButton } from 'components/RemoveAllButton'
 import { Link } from 'react-router-dom'
 
 
@@ -17,6 +18,7 @@ export const Cart = () => {
 
     return (
       < div >
+        <RemoveButton />
         <ul>
           {products.map((product) => (
             <CartItem key={product._id} product={product} />
