@@ -67,7 +67,7 @@ padding: 5px;
 }
 `
 
-const URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/users'
+const URL = process.env.REACT_APP_API_URL || 'https://final-project-ingrid.herokuapp.com/users'
 
 export const SignUp = () => {
   const [name, setName] = useState('')
