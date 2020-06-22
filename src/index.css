@@ -14,11 +14,7 @@ code {
 }
 
 .cart-icon {
-  padding: 3px;
-  border-radius: 50px;
-  width: 20px;
-  height: 20px;
-  background: grey;
+  margin-right: 10px;
 }
 
 .styling-loader {
@@ -65,7 +61,7 @@ code {
 
 @media (min-width: 600px) {
   .cart-icon {
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   .book-cards {
