@@ -6,7 +6,7 @@ import { ui } from './ui'
 export const fetchProducts = () => {
   return (dispatch) => {
     dispatch(ui.actions.setLoading(true))
-    fetch('http://localhost:8080/books')
+    fetch('https://final-project-ingrid.herokuapp.com/books')
       .then((res) => res.json())
       .then((json) => {
         dispatch(products.actions.setProducts(json))
