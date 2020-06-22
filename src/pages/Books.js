@@ -12,7 +12,9 @@ export const Books = () => {
     <div>
       <Navbar />
       <LoadingIndicator />
-      <Products />
+      <div className='book-cards'>
+        <Products />
+      </div>
     </div>
   )
 

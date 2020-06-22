@@ -6,7 +6,6 @@ import { AddToCartButton } from 'components/StyledComponents'
 export const RemoveButton = () => {
   const dispatch = useDispatch()
 
-
   return (
     <AddToCartButton
       type='button'

@@ -6,8 +6,9 @@ import { ProductCard, SecondaryText, AddToCartButton } from 'components/StyledCo
 export const CartItem = ({ product }) => {
   const dispatch = useDispatch()
   return (
-    <main>
-      <SecondaryText>{product.quantity} X </SecondaryText>
+    <main className='cart-items'>
+      <SecondaryText
+        color='#ffffff'>{product.quantity} X </SecondaryText>
       <ProductCard
         title={product.title}
         secondaryText={product.price * product.quantity}
@@ -18,5 +19,4 @@ export const CartItem = ({ product }) => {
       </div>
     </main>
   )
-
 }

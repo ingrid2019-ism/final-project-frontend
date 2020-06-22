@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import { Navbar } from 'components/Navbar'
 import styled from 'styled-components/macro'
-import { AddToCartButton, SecondaryText } from 'components/StyledComponents'
+import { AddToCartButton, HeroImage } from 'components/StyledComponents'
 
 
 export const MainContainer = styled.div`
 display: flex;
 flex-direction: column;
+
 @media (min-width: 600px) {
-  flex-direction: row;
+flex-direction: row;
 }
 `
 export const Container = styled.div`
@@ -18,8 +19,10 @@ border-radius: 6px;
 width: 50%;
 padding: 20px;
 margin: 20px;
+opacity: 92%;
+
 @media (min-width: 600px) {
-  width: 25%;
+width: 25%;
 }
 `
 export const Title = styled.h1`
@@ -101,44 +104,46 @@ export const SignUp = () => {
   return (
     <div>
       <Navbar />
-      <div className='about'>
-        <Container>
-          <form onSubmit={handleFormSubmit} >
-            <Title>Sign Up</Title>
-            <SmallTitle>To Get Our Newsletter</SmallTitle>
-            <Content>
-              <InputField
-                value={name}
-                placeholder='Enter Name'
-                type='text'
-                name='name'
-                onChange={event => setName(event.target.value)}
-                required
-              />
-              <InputField
-                value={email}
-                placeholder='Enter Email'
-                type='email'
-                name='email'
-                onChange={event => setEmail(event.target.value)}
-                required
-              />
-              <InputField
-                value={password}
-                placeholder='Enter Password'
-                type='password'
-                name='password'
-                onChange={event => setPassword(event.target.value)}
-                required
-              />
-              {errorMessage && <div>  <br />{errorMessage} </div>}
-              {successMessage && <div> <br />{successMessage} </div>}
-              <br />
-              <AddToCartButton onClick={handleFormSubmit} type="submit" >Submit</AddToCartButton>
-            </Content>
-          </form>
-        </Container >
-      </div>
+      <HeroImage>
+        <div className='about'>
+          <Container>
+            <form onSubmit={handleFormSubmit} >
+              <Title>Sign Up</Title>
+              <SmallTitle>To Get Our Newsletter</SmallTitle>
+              <Content>
+                <InputField
+                  value={name}
+                  placeholder='Enter Name'
+                  type='text'
+                  name='name'
+                  onChange={event => setName(event.target.value)}
+                  required
+                />
+                <InputField
+                  value={email}
+                  placeholder='Enter Email'
+                  type='email'
+                  name='email'
+                  onChange={event => setEmail(event.target.value)}
+                  required
+                />
+                <InputField
+                  value={password}
+                  placeholder='Enter Password'
+                  type='password'
+                  name='password'
+                  onChange={event => setPassword(event.target.value)}
+                  required
+                />
+                {errorMessage && <div>  <br />{errorMessage} </div>}
+                {successMessage && <div> <br />{successMessage} </div>}
+                <br />
+                <AddToCartButton onClick={handleFormSubmit} type="submit" >Submit</AddToCartButton>
+              </Content>
+            </form>
+          </Container >
+        </div>
+      </HeroImage>
     </div>
   )
 

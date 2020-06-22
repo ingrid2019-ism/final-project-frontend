@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Navbar } from 'components/Navbar'
-import { ProductCard } from 'components/StyledComponents'
+import { HeroImage, ProductCard } from 'components/StyledComponents'
 import { cart } from 'reducers/cart'
 
 export const CheckedOut = () => {
@@ -10,11 +10,13 @@ export const CheckedOut = () => {
   return (
     <div>
       <Navbar />
-      <div className='about'>
-        <ProductCard
-          title='Thank you for your purchase!'
-        />
-      </div>
+      <HeroImage>
+        <div className='about'>
+          <ProductCard
+            title='Thank you for your purchase!'
+          />
+        </div>
+      </HeroImage>
     </div>
   )
 }

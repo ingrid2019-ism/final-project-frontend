@@ -8,16 +8,15 @@ import { Title, CheckoutLink, ProductCard } from 'components/StyledComponents'
 
 export const Cart = () => {
   const products = useSelector((store) => store.cart.items)
-  // calculate total from the sum of all products in the cart
 
+  // calculate total from the sum of all products in the cart
   const totalPrice = useSelector((store) => (
     store.cart.items.reduce((total, item) => (total + (item.price * item.quantity)), 0)
   ))
 
   if ((!products.length) == 0) {
-
     return (
-      < div >
+      < div className='cart'>
         <div className='margin'>
           <RemoveButton />
         </div>
@@ -27,9 +26,10 @@ export const Cart = () => {
           ))}
         </ul>
         <div className='margin'>
-          <Title> Total: {totalPrice} :-</Title>
+          <Title
+            color='#ffffff'> Total: {totalPrice} :-</Title>
         </div>
-        <div className='checkout-link'>
+        <div className='margin checkout-link'>
           <CheckoutLink to='/checkout' color='black'>Checkout<span role='img' aria-label='moneyemoji'>💸</span></CheckoutLink>
         </div>
       </div >)

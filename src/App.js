@@ -22,7 +22,6 @@ const reducer = combineReducers({
 
 const store = configureStore({ reducer })
 
-
 export const App = () => {
   return (
     <BrowserRouter>
@@ -50,9 +49,7 @@ export const App = () => {
           <Route path='/checkout' exact>
             <CheckedOut />
           </Route>
-
         </Switch>
-
       </Provider>
     </BrowserRouter>
   )
