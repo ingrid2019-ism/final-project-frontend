@@ -19,7 +19,7 @@ export const Navbar = () => {
             <StyledLink to='/signup' color='#ffffff'>Sign Up</StyledLink>
           </li>
           <li>
-            <StyledLink to='/shoppingcart' color='#ffffff'><span className='cart-icon' role='img' aria-label='shoppingcart'>🛒{numProducts}</span></StyledLink>
+            <StyledLink to='/shoppingcart' color='#ffffff'><span className='cart-icon' role='img' aria-label='basket'>🧺{numProducts}</span></StyledLink>
           </li>
         </NavContent>
       </FirstNavContainer>
