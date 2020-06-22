@@ -10,7 +10,7 @@ export const RemoveButton = () => {
     <AddToCartButton
       type='button'
       onClick={() => dispatch(cart.actions.removeAll())}>
-      Clear <span role='img' aria-label='cart'>🛒</span>
+      Clear <span role='img' aria-label='shopping-bags'>🛍️</span>
     </AddToCartButton>
   )
 }
