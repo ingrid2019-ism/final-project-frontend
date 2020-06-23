@@ -14,7 +14,7 @@ export const Cart = () => {
     store.cart.items.reduce((total, item) => (total + (item.price * item.quantity)), 0)
   ))
 
-  if ((!products.length) == 0) {
+  if ((!products.length) === 0) {
     return (
       < div className='cart'>
         <div className='margin'>

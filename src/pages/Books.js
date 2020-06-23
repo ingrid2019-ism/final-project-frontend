@@ -4,7 +4,6 @@ import { Products } from 'components/Products'
 import { Navbar } from 'components/Navbar'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { fetchProducts } from 'reducers/products'
-import { sticky } from 'react-bootstrap'
 
 export const Books = () => {
   const dispatch = useDispatch()
