@@ -63,7 +63,7 @@ code {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  padding-top: 3px;
+  z-index: +1;
 }
 
 @media (min-width: 600px) {
