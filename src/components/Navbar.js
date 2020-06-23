@@ -6,7 +6,7 @@ export const Navbar = () => {
   const numProducts = useSelector((store) => store.cart.items).length
 
   return (
-    <nav>
+    <nav className='sticky'>
       <FirstNavContainer>
         <NameLogo>
           <HomeLink to='/' color='#ffffff'>Books 4 U</HomeLink>
