@@ -36,7 +36,6 @@ padding: 10px;
   height: 75px;
 }
 `
-
 export const NavContent = styled.div`
 display: flex;
 justify-content: flex-end;
@@ -105,7 +104,6 @@ text-decoration: none;
 font-family: 'MuseoModerno';
 font-size: 15px;
 `
-
 export const Container = styled.div`
 box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
 border-radius: 6px;
@@ -170,10 +168,10 @@ opacity: 50%;
   opacity: 100%;
 }
 
-@media (min-width: 600px) {
-width: fit-content;
-padding: 10px;
-margin-bottom: 15px;
+@media(min-width: 600px) {
+  width: fit-content;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 `
 
