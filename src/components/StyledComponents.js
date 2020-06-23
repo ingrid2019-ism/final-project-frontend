@@ -43,11 +43,15 @@ justify-content: flex-end;
 export const SecondaryNavContainer = styled.div`
 display: flex;
 justify-content: flex-end;
+background: #dcddde;
 height: 30px;
 width: 100%;
-margin-top: 10px;
+padding-top: 10px;
 border-radius: 3px;
-opacity: 70%;
+position: -webkit-sticky; /* Safari */
+position: sticky;
+top: 0;
+z-index: +1;
 
 @media (min-width: 600px) {
   height: 35px;
