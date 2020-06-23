@@ -64,11 +64,11 @@ code {
     margin-right: 20px;
   }
 
-  .book-cards {
+ /* .book-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
+  }*/
 
   .cart-button, .margin, .cart-items {
     display: flex;

@@ -9,14 +9,18 @@ export const HeroImage = styled.div`
  width: 100%;
  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${img});
  background-size: 170%;
-  position: relative;
-  background-position-x: center;
+ background-position-x: center;
  background-repeat: no-repeat;
  position: relative;
  margin: 0px;
 
  @media (min-width: 600px) {
   background-size: 110%;
+  height: 900px;
+  background-position: top;
+}
+@media (min-width: 1500px) {
+  background-position: center;
 }
 `
 export const FirstNavContainer = styled.div`
@@ -159,7 +163,12 @@ width: 25%;
 margin-left: 15px;
 margin-top: 0px;
 padding: 3px;
-opacity: 90%inherit;
+opacity: 50%;
+
+&:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
 
 @media (min-width: 600px) {
 width: fit-content;
