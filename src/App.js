@@ -26,7 +26,6 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Provider store={store}>
-
         <Switch>
           <Route path='/' exact>
             <Home />

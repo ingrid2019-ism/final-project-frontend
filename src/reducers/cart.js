@@ -13,7 +13,6 @@ export const cart = createSlice({
       } else {
         state.items.push({ ...action.payload, quantity: 1 })
       }
-
     },
     removeItem: (state, action) => {
       const existingProduct = state.items.find((item) => item._id === action.payload._id)

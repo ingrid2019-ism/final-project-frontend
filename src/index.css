@@ -26,8 +26,8 @@ code {
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #000407; /* black */
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #000407; 
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -71,13 +71,7 @@ code {
     margin-right: 20px;
   }
 
- /* .book-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }*/
-
-  .cart-button, .margin, .cart-items {
+.cart-button, .margin, .cart-items {
     display: flex;
     justify-content: center;
   }

@@ -5,22 +5,22 @@ import img from './images/hero_2.jpg'
 
 
 export const HeroImage = styled.div`
- height: 700px;
- width: 100%;
- background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${img});
- background-size: 170%;
- background-position-x: center;
- background-repeat: no-repeat;
- position: relative;
- margin: 0px;
+height: 700px;
+width: 100%;
+background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${img});
+background-size: 170%;
+background-position-x: center;
+background-repeat: no-repeat;
+position: relative;
+margin: 0px;
 
- @media (min-width: 600px) {
-  background-size: 110%;
-  height: 900px;
-  background-position: top;
+@media (min-width: 600px) {
+background-size: 110%;
+height: 900px;
+background-position: top;
 }
 @media (min-width: 1500px) {
-  background-position: center;
+background-position: center;
 }
 `
 export const FirstNavContainer = styled.div`
@@ -33,7 +33,7 @@ background: black;
 padding: 10px;
 
 @media (min-width: 600px) {
-  height: 75px;
+height: 75px;
 }
 `
 export const NavContent = styled.div`
@@ -54,7 +54,7 @@ top: 0;
 z-index: +1;
 
 @media (min-width: 600px) {
-  height: 35px;
+height: 35px;
 }
 `
 export const NameLogo = styled.h1`

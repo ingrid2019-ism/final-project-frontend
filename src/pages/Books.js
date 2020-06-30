@@ -10,7 +10,6 @@ export const Books = () => {
   dispatch(fetchProducts())
   return (
     <div>
-      {/*<Navbar sticky="top" />*/}
       <Navbar />
       <LoadingIndicator />
       <div className='book-cards'>
